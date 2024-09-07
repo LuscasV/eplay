@@ -16,16 +16,16 @@ import { GalleryItem } from '../../pages/Home'
 const mock: GalleryItem[] = [
   {
     type: 'image',
-    url: spider
+    url: spider,
   },
   {
     type: 'image',
-    url: hogwarts
+    url: hogwarts,
   },
   {
     type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=aMsxLdGKyAGb7Zzm"'
-  }
+    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=aMsxLdGKyAGb7Zzm"',
+  },
 ]
 
 type Props = {
@@ -42,7 +42,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     type: 'image',
-    url: ''
+    url: '',
   })
   const getMediaCover = (item: GalleryItem) => {
     if (item.type === 'image') return item.url
@@ -58,7 +58,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
     setModal({
       isVisible: false,
       type: 'image',
-      url: ''
+      url: '',
     })
   }
 
@@ -73,7 +73,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
                 setModal({
                   isVisible: true,
                   type: media.type,
-                  url: media.url
+                  url: media.url,
                 })
               }}
             >

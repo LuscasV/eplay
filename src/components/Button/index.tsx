@@ -15,7 +15,7 @@ const Button = ({
   to,
   onClick,
   children,
-  variant = 'primary'
+  variant = 'primary',
 }: Props) => {
   if (type === 'button') {
     return (

@@ -11,7 +11,7 @@ export type Props = {
 export const formataPreco = (preco = 0) => {
   return new Intl.NumberFormat('pt-br', {
     style: 'currency',
-    currency: 'BRL'
+    currency: 'BRL',
   }).format(preco)
 }
 const ProductsList = ({ background, title, games }: Props) => {

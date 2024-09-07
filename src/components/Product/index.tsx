@@ -19,7 +19,7 @@ const Product = ({
   description,
   infos,
   image,
-  id
+  id,
 }: Props) => {
   const getDescricao = (descricao: string) => {
     if (descricao.length > 95) {
