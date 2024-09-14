@@ -1,12 +1,10 @@
-import { Imagem, Precos, Titulo } from './styles'
-import bannerImg from '../../assets/images/banner-homem-aranha.png'
 import Tag from '../Tag'
 import Button from '../Button'
-import { useEffect, useState } from 'react'
-import { Game } from '../../pages/Home'
-import { formataPreco } from '../ProductsList'
 
+import { formataPreco } from '../ProductsList'
 import { useGetFeaturedGameQuery } from '../../services/api'
+
+import { Imagem, Precos, Titulo } from './styles'
 
 const Banner = () => {
   const { data: game, isLoading } = useGetFeaturedGameQuery()
