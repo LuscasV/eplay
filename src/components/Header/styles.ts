@@ -44,6 +44,26 @@ export const NavMobile = styled.nav`
   }
 `
 
+export const HeaderRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    flex: 1;
+    justify-content: space-between;
+
+    ${Links} {
+      display: none;
+    }
+  }
+`
+
 export const LinkItem = styled.li`
   margin-right: 16px;
 
@@ -85,25 +105,5 @@ export const Hamburguer = styled.div`
 
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
-  }
-`
-
-export const HeaderRow = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  > div {
-    display: flex;
-    align-items: center;
-  }
-
-  @media (max-width: ${breakpoints.tablet}) {
-    flex: 1;
-    justify-content: space-between;
-
-    ${Links} {
-      display: none;
-    }
   }
 `
