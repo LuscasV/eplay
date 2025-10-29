@@ -40,39 +40,39 @@ type PurchaseResponse = {
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://fake-api-tau.vercel.app/api/eplay',
+    baseUrl: '',
   }),
   endpoints: (builder) => ({
     getFeaturedGame: builder.query<Game, void>({
-      query: () => 'destaque',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/destaque',
     }),
     getOnSale: builder.query<Game[], void>({
-      query: () => 'promocoes',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/promocoes',
     }),
     getSoon: builder.query<Game[], void>({
-      query: () => 'em-breve',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/em-breve',
     }),
     getActionGames: builder.query<Game[], void>({
-      query: () => 'acao',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/acao',
     }),
     getSportGames: builder.query<Game[], void>({
-      query: () => 'esportes',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/esportes',
     }),
     getSimulationGames: builder.query<Game[], void>({
-      query: () => 'simulacao',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/simulacao',
     }),
     getFightGames: builder.query<Game[], void>({
-      query: () => 'luta',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/luta',
     }),
     getRpgGames: builder.query<Game[], void>({
-      query: () => 'rpg',
+      query: () => 'https://api-ebac.vercel.app/api/eplay/rpg',
     }),
     getGame: builder.query<Game, string>({
-      query: (id) => `jogos/${id}`,
+      query: (id) => `https://api-ebac.vercel.app/api/eplay/jogos/${id}`,
     }),
     purchase: builder.mutation<PurchaseResponse, PurchasePayload>({
       query: (body) => ({
-        url: 'checkout',
+        url: 'https://api-ebac.vercel.app/api/eplay/checkout',
         method: 'POST',
         body,
       }),
